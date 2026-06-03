@@ -199,7 +199,7 @@
         }
 
         /* =========================================
-           SECCIÓN BLOG (NUEVO)
+           SECCIÓN BLOG
            ========================================= */
         .blog-grid {
             display: grid;
@@ -279,7 +279,7 @@
             color: var(--color-oscuro);
         }
 
-        /* Modal genérico (Galería) */
+        /* Modales genéricos */
         .modal {
             display: none;
             position: fixed;
@@ -326,6 +326,7 @@
             font-weight: bold;
             cursor: pointer;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            z-index: 10;
         }
 
         @keyframes popIn {
@@ -376,11 +377,14 @@
             <li><a href="#blog">Blog Empresarial</a></li>
             <li><a href="#datos">Estadísticas</a></li>
             <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#enlace-video">Video</a></li>
         </ul>
     </nav>
 
     <!-- Sección de Portada (Hero) -->
     <header class="hero" id="inicio">
+        <!-- Nuevo Título Agregado -->
+        <h2 style="color: var(--color-ods2); font-size: 2rem; font-weight: 700; margin-bottom: 10px; letter-spacing: 2px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); text-transform: uppercase;">PROYECTO FINAL</h2>
         <h1 id="titulo-principal">Hambre Cero</h1>
         <p>Poner fin al hambre y lograr la seguridad alimentaria empieza por fortalecer nuestras economías locales, apoyar a los pequeños productores y modernizar nuestras cadenas de suministro.</p>
         <a href="#blog" class="btn">Lee nuestro Blog</a>
@@ -516,6 +520,25 @@
         <div id="mapa-interactivo"></div>
     </section>
 
+    <!-- =========================================
+         NUEVA SECCIÓN: ENLACE AL VIDEO
+         ========================================= -->
+    <section id="enlace-video" class="section-container" style="text-align: center; margin-bottom: 40px;">
+        <h2 class="section-title">Video del Proyecto</h2>
+        <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+            Conoce más sobre nuestro análisis y propuestas en el siguiente enlace:
+        </p>
+        <a href="https://youtu.be/skEi2YgVx24?si=DNoht_i2nl0sn_SO" target="_blank" class="btn" style="display: inline-block;">
+            Ver Video en YouTube
+        </a>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #555;">
+            Enlace directo: 
+            <a href="https://youtu.be/skEi2YgVx24?si=DNoht_i2nl0sn_SO" target="_blank" style="color: var(--color-ods2); text-decoration: underline; font-weight: bold;">
+                https://youtu.be/skEi2YgVx24
+            </a>
+        </p>
+    </section>
+
     <!-- Footer -->
     <footer>
         <h2>Juntos podemos lograr el #HambreCero</h2>
@@ -547,7 +570,7 @@
             delay: 2 
         });
 
-        // 2. LÓGICA DE LA GALERÍA (Modal)
+        // 2. LÓGICA DE LA GALERÍA Y BLOG (Modales)
         const modal = document.getElementById("infoModal");
         const closeModalBtn = document.querySelector(".close-modal");
         const cards = document.querySelectorAll(".card");
